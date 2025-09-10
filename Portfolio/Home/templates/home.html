@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body, html {
+      height: 100%;
+    }
+
+    /* The hero image with gradient overlay */
+    .hero-image {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url(../static/nature.jpeg);
+      height: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Place text in the middle of the image */
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    /* Style the navigation bar */
+    .navbar {
+      width: 100%;
+      background-color: #007b83;
+      overflow: auto;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      text-align: center;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    /* Navbar links on hover */
+    .navbar a:hover {
+      background-color: #000;
+    }
+
+    /* Responsive navbar */
+    @media screen and (max-width: 500px) {
+      .navbar a {
+        float: none;
+        display: block;
+      }
+    }
+
+    /* Teal color utilities */
+    .bg-teal-custom {
+      background-color: #007b83;
+    }
+    .text-teal-custom {
+      color: #007b83;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="/aboutMe"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="/education"><i class="fa-solid fa-user-graduate"></i> Education</a>
+      <a href="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-image">
+    <div class="hero-text">
+      <!-- Light Card on top of Hero -->
+      <div class="bg-white/80 p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-gray-800">I am Unity Busingye</h1>
+        <p class="text-gray-700">And I'm a Software Engineer</p>
+        <button class="mt-4 bg-[#007b83] text-white px-6 py-2 rounded-lg hover:bg-[#006a72]">
+          Hire Me
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section (always white background) -->
+  <div class="w-full min-h-screen flex items-center bg-white">
+    <div class="w-full lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 flex flex-col gap-4 pt-10 pb-20 text-gray-900">
+      <!-- Title -->
+      <div class="flex flex-col gap-2 mb-2 md:mb-4">
+        <h2 class="text-4xl font-serif font-semibold">About Me</h2>
+        <span class="w-16 h-[4px] bg-teal-custom rounded"></span>
+        <span class="w-8 h-[4px] bg-teal-custom rounded"></span>
+      </div>
+
+      <h4 class="capitalize text-xl font-semibold">I'm Unity Busingye and I'm
+        <span class="text-teal-custom">web developer</span>
+      </h4>
+      <p>I am a dedicated and innovative FullStack Developer passionate about creating impactful digital
+        experiences. With a keen eye for detail and a commitment to excellence, I specialize in designing and developing
+        solutions that combine creativity with functionality.</p>
+
+      <div class="w-full flex flex-col lg:flex-row gap-6 sm:gap-4 lg:gap-6 justify-between">
+        <!-- Col 1 -->
+        <div class="w-full flex flex-col items-stretch gap-4">
+          <!-- col 1 -->
+          <div class="flex flex-col sm:flex-row gap-2 md:gap-6 items-center justify-between font-serif">
+            <!-- 1 -->
+            <ul class="w-full">
+              <li class="py-2 border-b border-gray-200"><span class="font-bold">Website :</span>
+                https://website.com</li>
+              <li class="py-2 border-b border-gray-200"><span class="font-bold">Certificate :</span> Cert.
+                Software Engineering</li>
+              <li class="py-2 border-b border-gray-200"><span class="font-bold">Location :</span>
+                Kampala, Uganda</li>
+            </ul>
+            <!-- 2 -->
+            <ul class="w-full font-serif">
+              <li class="py-2 border-b border-gray-200"><span class="font-bold">Email :</span>
+                unitybusingye9@gmail.com</li>
+              <li class="py-2 border-b border-gray-200"><span class="font-bold">Phone No :</span>
+                +256773808796</li>
+              <li class="py-2 border-b border-gray-200"><span class="font-bold">Employment :</span>
+                Remote</li>
+              <li class="py-2 border-b border-gray-200"><span class="font-bold">Freelance :</span>
+                Available</li>
+            </ul>
+          </div>
+          <!-- Buttons -->
+          <div class="flex gap-4 justify-center sm:justify-start">
+            <button class="px-4 sm:px-6 py-2 bg-[#007b83] rounded-full text-white font-bold">Download CV</button>
+          </div>
+        </div>
+
+        <!-- Col 2 (Skills Progress Bars) -->
+        <div class="w-full flex flex-col gap-2">
+          <!-- Progress bar 1 -->
+          <div class="flex flex-col gap-2">
+            <div class="w-full flex justify-between font-semibold">
+              <span>WordPress</span>
+              <span>92 %</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded-full">
+              <div class="w-[92%] h-2 bg-teal-custom rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- Progress bar 2 -->
+          <div class="flex flex-col gap-2">
+            <div class="w-full flex justify-between font-semibold">
+              <span>HTML/CSS/Javascript</span>
+              <span>90 %</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded-full">
+              <div class="w-[90%] h-2 bg-teal-custom rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- Progress bar 3 -->
+          <div class="flex flex-col gap-2">
+            <div class="w-full flex justify-between font-semibold">
+              <span>AWS</span>
+              <span>80 %</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded-full">
+              <div class="w-[80%] h-2 bg-teal-custom rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- Progress bar 4 -->
+          <div class="flex flex-col gap-2">
+            <div class="w-full flex justify-between font-semibold">
+              <span>AGILE METHODOLOGIES</span>
+              <span>85 %</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded-full">
+              <div class="w-[85%] h-2 bg-teal-custom rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- Progress bar 5 -->
+          <div class="flex flex-col gap-2">
+            <div class="w-full flex justify-between font-semibold">
+              <span>PROTOTYPING</span>
+              <span>70 %</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded-full">
+              <div class="w-[70%] h-2 bg-teal-custom rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer style="background-color:black;color:white;padding:20px;text-align:center;">
+  © 2025 UnityBusingye. All rights reserved.
+</footer>
+</html>

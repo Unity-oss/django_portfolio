@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Timeline</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #007b83;
+      font-family: Helvetica, sans-serif;
+    }
+      /* Style the navigation bar */
+    .navbar {
+      width: 100%;
+      background-color: white;
+      overflow: auto;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      text-align: center;
+      padding: 12px;
+      color: black;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    /* Timeline container */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Vertical line */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: white;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    /* Timeline item container */
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    /* Circle on timeline */
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid #FF9F55;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    /* Left timeline items */
+    .left {
+      left: 0;
+    }
+
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+
+    /* Right timeline items */
+    .right {
+      left: 50%;
+    }
+
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    .right::after {
+      left: -16px;
+    }
+
+    /* Timeline content box */
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+    }
+
+    /* Responsive timeline for small screens */
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .container::before {
+        left: 60px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      .container::after {
+        left: 15px;
+      }
+
+      .left, .right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+  <header>
+    <div class="navbar">
+      <a href="/aboutMe"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="/education"><i class="fa-solid fa-user-graduate"></i> Education</a>
+      <a href="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    </div>
+  </header>
+<body>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>2025</h2>
+        <p>Certificate in Software Engineering</p>
+        <p>Refactory Academy</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2024</h2>
+        <p>Certificate in Graphic Design</p>
+        <p>Banda Computer Centre</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2019 - 2023 </h2>
+        <p>Bachelor in Business Administration</p>
+        <p>Kyambogo University</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2017 - 2018</h2>
+        <p>Uganda Advanced Certificate of Education</p>
+        <p>St.Peter's Naalya</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2013 - 2016</h2>
+        <p>Uganda Certificate of Education</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2012</h2>
+        <p>Primary Leaving Certificate</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+<footer style="background-color:white;color:black;padding:20px;text-align:center;">
+  © 2025 UnityBusingye. All rights reserved.
+</footer>
+</html>
