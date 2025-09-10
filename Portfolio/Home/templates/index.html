@@ -72,13 +72,13 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <a href="/aboutMe"><i class="fa-solid fa-house"></i> Home</a>
-      <a href="/education"><i class="fa-solid fa-user-graduate"></i> Education</a>
-      <a href="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    </div>
-  </header>
+<header>
+  <div class="navbar">
+    <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="{% url 'education' %}"><i class="fa-solid fa-user-graduate"></i> Education</a>
+    <a href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  </div>
+</header>
 
   <!-- Hero Section -->
   <div class="hero-image">
